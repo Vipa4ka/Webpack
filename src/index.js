@@ -1,5 +1,4 @@
-import './css/index.css';
-// import css from "./css/index.css";
+import './css/index.scss';
 
 function component() {
   const element = document.createElement('div');

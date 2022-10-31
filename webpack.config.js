@@ -11,12 +11,17 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.css$/i,
-       use: ["style-loader", "css-loader"],
+        test: /\.scss$/i,
+       use: ["style-loader", "css-loader", "sass-loader"],
       },
+      {
+        test: /\.m?js$/,
+        exclude: /node_modules/,
+        use: ['babel-loader']
+      }, 
     ],
   },
-  plugins: [new HtmlWebpackPlugin({ template: './index.html' })],
+  plugins: [new HtmlWebpackPlugin({ template: 'src/index.html'})],
   devServer: {
     port: 9000,
     open: true,
